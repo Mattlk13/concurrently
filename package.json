@@ -12,7 +12,9 @@
   "scripts": {
     "lint": "eslint . --ignore-path .gitignore",
     "report-coverage": "cat coverage/lcov.info | coveralls",
-    "test": "jest"
+    "test": "jest",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -37,7 +39,8 @@
     "spawn-command": "^0.0.2-1",
     "supports-color": "^4.5.0",
     "tree-kill": "^1.2.1",
-    "yargs": "^12.0.5"
+    "yargs": "^12.0.5",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "coveralls": "^3.0.4",
@@ -55,5 +58,6 @@
       "/node_modules/"
     ],
     "testEnvironment": "node"
-  }
+  },
+  "snyk": true
 }
