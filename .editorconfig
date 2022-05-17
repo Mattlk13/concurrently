@@ -3,26 +3,17 @@
 # top-most EditorConfig file
 root = true
 
-# Unix-style newlines with a newline ending every file
+# Unix-style newlines with newline ending and space indentation for all files
 [*]
 end_of_line = lf
 insert_final_newline = true
-
-# 4 space indentation
-[*.py]
 indent_style = space
+
+# 4 space indentation and max line length of 100 in *.ts files
+[*.ts]
 indent_size = 4
+max_line_length = 100
 
-# Tab indentation (no size specified)
-[*.js]
-indent_style = space
-indent_size = 4
-
-# Matches the exact files package.json and .travis.yml
-[{package.json,.travis.yml,Gruntfile.js}]
-indent_style = space
+# 2 space indentation in package.json
+[package.json]
 indent_size = 2
-
-[Makefile]
-indent_style = tab
-indent_size = 4
